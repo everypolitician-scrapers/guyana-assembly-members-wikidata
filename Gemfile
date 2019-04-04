@@ -1,0 +1,25 @@
+# frozen_string_literal: true
+# It's easy to add more libraries or choose different versions. Any libraries
+# specified here will be installed and made available to your morph.io scraper.
+# Find out more: https://morph.io/documentation/ruby
+
+ruby '2.4.4'
+
+source 'https://rubygems.org'
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
+
+gem 'everypolitician', github: 'everypolitician/everypolitician-ruby'
+gem 'mediawiki_api'
+gem 'nokogiri'
+gem 'open-uri-cached'
+gem 'pry'
+gem 'rest-client'
+gem 'scraperwiki', github: 'openaustralia/scraperwiki-ruby',
+                   branch: 'morph_defaults'
+gem 'sqlite_magic', github: 'openc/sqlite_magic'
+gem 'wikidata-fetcher', '>=0.20.2', github: 'everypolitician/wikidata-fetcher'
+gem 'wikisnakker', github: 'everypolitician/wikisnakker'
+
+group :quality do
+  gem 'rubocop'
+end
